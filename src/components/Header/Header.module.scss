@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 13px 22px 13px 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.leftSide {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.rightSide {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.singUp {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #52c41a;
+  background: transparent;
+  border: 1px solid #52c41a;
+  border-radius: 5px;
+  padding: 6px 17px 6px 17px;
+  font-family: 'Inter';
+}
+.singIn {
+  border: none;
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: 'Inter';
+}
+.logo {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.name {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+}
+.logOut {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.75);
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  padding: 6px 17px 6px 17px;
+  font-family: 'Inter';
+}
+.create {
+  font-size: 18px;
+  line-height: 28px;
+  color: #52c41a;
+  background: transparent;
+  border: 1px solid #52c41a;
+  border-radius: 5px;
+  padding: 6px 17px 6px 17px;
+  font-family: 'Inter';
+}

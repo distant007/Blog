@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 26px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-bottom: 26px;
+}
+.content {
+  height: 140px;
+}

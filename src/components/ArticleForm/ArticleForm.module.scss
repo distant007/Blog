@@ -1,0 +1,61 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 938px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  margin-top: 34px;
+}
+.input {
+  height: 40px;
+}
+textarea.text {
+  height: 168px;
+}
+.login {
+  width: 100%;
+}
+.button {
+  width: 319px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: auto;
+}
+.tag {
+  width: 300px;
+  height: 40px;
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.delete {
+  color: #f5222d;
+  border: 1px solid #f5222d;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 40px;
+}
+.tagsPlace {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: flex-end;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.addTag {
+  color: #1890ff;
+  border: 1px solid #1890ff;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 40px;
+  margin-bottom: 24px;
+}

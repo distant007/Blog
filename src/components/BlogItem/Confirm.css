@@ -1,0 +1,31 @@
+.ant-modal-content {
+  width: 240px;
+  height: 104px;
+}
+.ant-modal-root .ant-modal-mask {
+  background-color: transparent;
+}
+.ant-modal-root .ant-modal-wrap .ant-modal {
+  position: absolute;
+  top: 200px;
+  right: 0px;
+  width: auto;
+}
+.ant-modal-confirm-body-wrapper .ant-modal-confirm-body .ant-modal-confirm-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #595959;
+}
+.ant-modal-confirm-body-wrapper .ant-modal-confirm-btns {
+  margin: 0;
+}
+.ant-modal-confirm-btns .ant-btn {
+  width: 34px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0;
+  margin: 0;
+}
