@@ -5,6 +5,7 @@ import { ExclamationCircleFilled } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { Modal } from 'antd'
 import { useState, useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 import { getList } from '../../services/getList'
 import { deleteArticle } from '../../services/deleteArticle'
@@ -93,7 +94,7 @@ const BlogItem = (props) => {
         </div>
         <div className={styles.tags}>{tags}</div>
 
-        <p className={styles.description}>{description}</p>
+        <ReactMarkdown className={styles.description}>{description}</ReactMarkdown>
       </div>
       <div className={styles.rightSide}>
         <div className={styles.user}>
