@@ -1,2 +1,2 @@
 # Blog
-Blog Platform[https://blog-red-tau-38.vercel.app]
+[Blog Platform](https://blog-red-tau-38.vercel.app)
