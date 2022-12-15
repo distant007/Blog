@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const email = localStorage.getItem('email')
     const password = localStorage.getItem('password')
-    if (data === null && email !== 'null') {
+    if (data === null && email && email !== 'null') {
       dispatch(singIn(email, password))
     }
   })
