@@ -7,12 +7,10 @@ import { Modal } from 'antd'
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { getList } from '../../services/getList'
-import { deleteArticle } from '../../services/deleteArticle'
 import defaultImg from '../../assets/images/default.svg'
 import likesImg from '../../assets/images/likes.svg'
 import likedImg from '../../assets/images/liked.svg'
-import { likesArticle, unLike } from '../../services/likesArticle'
+import { likesArticle, unLike, getList, deleteArticle } from '../../services/blogServices'
 
 import styles from './BlogItem.module.scss'
 import './Confirm.css'
@@ -21,7 +19,7 @@ const BlogItem = (props) => {
   const [onDelete, setDelete] = useState(false)
   const [hadLike, setHadLike] = useState(item.favorited)
   const [hasErrorImg, setHasErrorImg] = useState(false)
-  const [likes] = useState(item.favoritesCount)
+  const [likes, setLikes] = useState(item.favoritesCount)
   const offset = useSelector((state) => state.listReducer.offset)
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -55,14 +53,18 @@ const BlogItem = (props) => {
     return tags
   }
   const onLike = () => {
-    if (hadLike === false) {
-      likesArticle(token, item.slug)
-      setHadLike(true)
-    } else {
-      unLike(token, item.slug)
-      setHadLike(false)
+    let like = likes
+    if (username !== 'null') {
+      if (hadLike === false) {
+        dispatch(likesArticle(token, item.slug))
+        setHadLike(true)
+        setLikes(++like)
+      } else {
+        dispatch(unLike(token, item.slug))
+        setHadLike(false)
+        setLikes(--like)
+      }
     }
-    setTimeout(() => dispatch(getList(offset)), 100)
   }
   const description = item.description.length > 450 ? kitcut(item.description, 450) : item.description
   const title = item.title ? (item.title.length > 45 ? kitcut(item.title, 45) : item.title) : null

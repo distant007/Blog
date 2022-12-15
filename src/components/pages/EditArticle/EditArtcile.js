@@ -3,9 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-import ArticleForm from '../ArticleForm/ArticleForm'
-import { editArticle } from '../../services/editArticle'
-import { getArticle } from '../../services/getList'
+import ArticleForm from '../../ArticleForm/ArticleForm'
+import { getArticle, editArticle } from '../../../services/blogServices'
 // import styles from './EditArticle.module.scss'
 const EditArticle = () => {
   const navigate = useNavigate()

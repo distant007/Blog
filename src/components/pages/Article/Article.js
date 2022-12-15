@@ -3,9 +3,9 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactMarkdown from 'react-markdown'
 
-import { getArticle } from '../../services/getList'
-import BlockItem from '../BlogItem/BlogItem'
-import Loader from '../UI/Loader/Loader'
+import { getArticle } from '../../../services/blogServices'
+import BlockItem from '../../BlogItem/BlogItem'
+import Loader from '../../UI/Loader/Loader'
 
 import styles from './Article.module.scss'
 
@@ -33,4 +33,3 @@ const Article = () => {
 }
 
 export default Article
-// "ts-rqlbrr"

@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
 import { useNavigate } from 'react-router-dom'
 
-import Loader from '../UI/Loader/Loader'
-import BlogItem from '../BlogItem/BlogItem'
-import PaginationTabs from '../UI/PaginationTabs/PaginationTabs'
-import { getList } from '../../services/getList'
-import Error from '../UI/Error/Error'
+import Loader from '../../UI/Loader/Loader'
+import BlogItem from '../../BlogItem/BlogItem'
+import PaginationTabs from '../../UI/PaginationTabs/PaginationTabs'
+import { getList } from '../../../services/blogServices'
+import Error from '../../UI/Error/Error'
 
 import styles from './BlogList.module.scss'
 const BlogList = () => {

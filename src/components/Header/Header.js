@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import userImg from '../../assets/images/user.svg'
-import { getList } from '../../services/getList'
+import { getList } from '../../services/blogServices'
 
 import styles from './Header.module.scss'
 
@@ -15,6 +15,7 @@ const Header = () => {
     dispatch({ type: 'USER', payload: null })
     localStorage.setItem('username', null)
     localStorage.setItem('email', null)
+    localStorage.setItem('token', null)
     navigate('/')
   }
   const DeleteSlug = () => {

@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-import { postArticle } from '../../services/postArticle'
-import ArticleForm from '../ArticleForm/ArticleForm'
-import { getList } from '../../services/getList'
+import ArticleForm from '../../ArticleForm/ArticleForm'
+import { getList, postArticle } from '../../../services/blogServices'
 
 const NewArticle = () => {
   const dispatch = useDispatch()

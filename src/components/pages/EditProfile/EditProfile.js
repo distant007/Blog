@@ -4,16 +4,19 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react'
 
-import { editProfile } from '../../services/editProfile'
+import { editProfile } from '../../../services/blogServices'
 
 import styles from './EditProfile.module.scss'
 const EditProfile = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const user = localStorage.getItem('username')
   const [onEdit, setEdit] = useState(false)
   useEffect(() => {
     if (onEdit === true) {
       setEdit(false)
+      navigate('/')
+    } else if (user === 'null') {
       navigate('/')
     }
   })
@@ -30,6 +33,8 @@ const EditProfile = () => {
         className="login-form"
         initialValues={{
           remember: true,
+          username: localStorage.getItem('username'),
+          email: localStorage.getItem('email'),
         }}
         onFinish={onFinish}
       >

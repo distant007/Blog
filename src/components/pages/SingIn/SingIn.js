@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
-import { singIn } from '../../services/singin'
+import { singIn } from '../../../services/blogServices'
 
 import styles from './SingIn.module.scss'
 const SingIn = () => {

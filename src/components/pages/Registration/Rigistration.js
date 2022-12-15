@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { registration } from '../../services/registration'
+import { registration } from '../../../services/blogServices'
 
 import styles from './Registration.module.scss'
 const Registration = () => {
@@ -12,7 +12,6 @@ const Registration = () => {
   const navigate = useNavigate()
   const res = useSelector((state) => state.registrationReducer.res)
   const error = useSelector((state) => state.registrationReducer.error)
-  console.log(res)
   const onFinish = (values) => {
     dispatch(registration(values.username, values.email, values.password))
   }
@@ -95,7 +94,7 @@ const Registration = () => {
           <Input type="password" placeholder="Password" />
         </Form.Item>
         <Form.Item className={styles.checkbox}>
-          <Form.Item name="remember" valuePropName="checked" noStyle>
+          <Form.Item name="remember" valuePropName="checked" noStyle rules={[{ required: true }]}>
             <Checkbox className={styles.checkText}>I agree to the processing of my personal information</Checkbox>
           </Form.Item>
         </Form.Item>
