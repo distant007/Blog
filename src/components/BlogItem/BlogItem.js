@@ -54,7 +54,7 @@ const BlogItem = (props) => {
   }
   const onLike = () => {
     let like = likes
-    if (!username && username !== 'null') {
+    if (!username || username !== 'null') {
       if (hadLike === false) {
         dispatch(likesArticle(token, item.slug))
         setHadLike(true)

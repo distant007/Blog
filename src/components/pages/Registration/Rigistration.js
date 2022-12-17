@@ -10,8 +10,8 @@ const Registration = () => {
   const [password, setPass] = useState(null)
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const res = useSelector((state) => state.registrationReducer.res)
-  const error = useSelector((state) => state.registrationReducer.error)
+  const res = useSelector((state) => state.singInReducer.user)
+  const error = useSelector((state) => state.singInReducer.error)
   const onFinish = (values) => {
     dispatch(registration(values.username, values.email, values.password))
   }
